@@ -44,7 +44,7 @@ class PartnerTest extends \PHPUnit_Framework_TestCase
      *
      * @expectedException \RuntimeException
      * @expectedExceptionMessage An invalid server was provided: "noserver".
-     * @covers Partner::__construct
+     * @covers Slevomat\Client\Partner::__construct
      */
     public function testConstructor()
     {
@@ -67,7 +67,7 @@ class PartnerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Slevomat_Client_Partner::checkVoucher
+     * @covers Slevomat\Client\Partner::checkVoucher
      */
     public function testCheckVoucher()
     {
@@ -76,7 +76,7 @@ class PartnerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Slevomat_Client_Partner::applyVoucher
+     * @covers Slevomat\Client\Partner::applyVoucher
      */
     public function testApplyVoucher()
     {
@@ -85,7 +85,7 @@ class PartnerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Slevomat_Client_Partner::performRequest
+     * @covers Slevomat\Client\Partner::performRequest
      */
     public function testPerformRequest()
     {
@@ -98,7 +98,7 @@ class PartnerTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @before checkVoucher
-     * @covers Slevomat_Client_Partner::prepareRequest
+     * @covers Slevomat\Client\Partner::prepareRequest
      */
     public function testPrepareRequest()
     {
@@ -107,7 +107,7 @@ class PartnerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Slevomat_Client_Partner::prepareRequestUrl
+     * @covers Slevomat\Client\Partner::prepareRequestUrl
      */
     public function testPrepareRequestUrl()
     {
@@ -120,7 +120,7 @@ class PartnerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Slevomat_Client_Partner::checkRequirements
+     * @covers Slevomat\Client\Partner::checkRequirements
      */
     public function testCheckRequirements()
     {

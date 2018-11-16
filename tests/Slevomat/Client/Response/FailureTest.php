@@ -62,7 +62,7 @@ class FailureTest extends \PHPUnit_Framework_TestCase
     /**
      * Test Constructor
      *
-     * @covers Failure::__construct
+     * @covers Slevomat\Client\Response\Failure::__construct
      */
     public function testConstructor()
     {
@@ -74,7 +74,7 @@ class FailureTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Failure::parseResponseData
+     * @covers Slevomat\Client\Response\Failure::parseResponseData
      */
     public function testParseResponseData()
     {
@@ -108,7 +108,7 @@ class FailureTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Slevomat_Client_Response_Abstract::getResult
+     * @covers Slevomat\Client\Response\Common::getResult
      */
     public function testGetResult()
     {
@@ -116,7 +116,7 @@ class FailureTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Slevomat_Client_Response_Abstract::getHttpCode
+     * @covers Slevomat\Client\Response\Common::getHttpCode
      */
     public function testGetHttpCode()
     {

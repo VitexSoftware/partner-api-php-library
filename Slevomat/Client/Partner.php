@@ -81,6 +81,7 @@ class Partner
      *
      * @param string $code Voucher code
      * @param Slevomat_Client_Response_Abstract $response Response object
+     * 
      * @return boolean
      */
     public function checkVoucher($code, &$response = null)
@@ -169,6 +170,7 @@ class Partner
      *
      * @param string $action Action name
      * @param array $parameters Additional HTTP parameters
+     * 
      * @return string
      */
     protected function prepareRequestUrl($action, array $parameters)

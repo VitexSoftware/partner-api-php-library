@@ -67,7 +67,7 @@ class SuccessTest extends \PHPUnit_Framework_TestCase
     /**
      * Test Constructor
      *
-     * @covers Success::__construct
+     * @covers Slevomat\Client\Response\Success::__construct
      */
     public function testConstructor()
     {
@@ -79,7 +79,7 @@ class SuccessTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Success::parseResponseData
+     * @covers Slevomat\Client\Response\Success::parseResponseData
      */
     public function testParseResponseData()
     {
@@ -89,7 +89,7 @@ class SuccessTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Success::getData
+     * @covers Slevomat\Client\Response\Success::getData
      */
     public function testGetData()
     {
@@ -105,7 +105,7 @@ class SuccessTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Abstract::getResult
+     * @covers Slevomat\Client\Response\Common::getResult
      */
     public function testGetResult()
     {
@@ -113,7 +113,7 @@ class SuccessTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Abstract::getHttpCode
+     * @covers Slevomat\Client\Response\Common::getHttpCode
      */
     public function testGetHttpCode()
     {
