@@ -64,7 +64,7 @@ class Partner
         $this->checkRequirements();
 
         if ($server !== self::SERVER_CZ && $server !== self::SERVER_SK) {
-            throw new RuntimeException(sprintf('An invalid server was provided: "%s".',
+            throw new \RuntimeException(sprintf('An invalid server was provided: "%s".',
                 $server));
         }
 
@@ -116,7 +116,7 @@ class Partner
      * @param string $action Action name
      * @param array $parameters Additional HTTP parameters
      * @return Slevomat_Client_Response_Abstract
-     * @throws RuntimeException When the request to the API could not be performed
+     * @throws \RuntimeException When the request to the API could not be performed
      */
     protected function performRequest($action, array $parameters)
     {
@@ -127,7 +127,7 @@ class Partner
 
         $responseData = @curl_exec($request);
         if (false === $responseData) {
-            throw new RuntimeException(sprintf('Could not perform a request to "%s": %s.',
+            throw new \RuntimeException(sprintf('Could not perform a request to "%s": %s.',
                 $requestUrl, curl_error($request)));
         }
 
@@ -179,20 +179,20 @@ class Partner
     /**
      * Checks for requirements.
      *
-     * @throws RuntimeException When a required PHP extension is not present.
+     * @throws \RuntimeException When a required PHP extension is not present.
      */
     protected function checkRequirements()
     {
         if (version_compare(PHP_VERSION, '5.2', '<')) {
-            throw new RuntimeException('PHP version 5.2 or newer is required.');
+            throw new \RuntimeException('PHP version 5.2 or newer is required.');
         }
 
         if (!extension_loaded('json')) {
-            throw new RuntimeException('The "json" PHP extension is required.');
+            throw new \RuntimeException('The "json" PHP extension is required.');
         }
 
         if (!extension_loaded('curl')) {
-            throw new RuntimeException('The "curl" PHP extension is required.');
+            throw new \RuntimeException('The "curl" PHP extension is required.');
         }
     }
 }
